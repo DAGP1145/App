@@ -7,7 +7,7 @@
       </ion-img> 
   
       <ion-item class="Cr-1 se " >
-        <ion-input Placeholder="USUARIO"></ion-input>
+        <ion-input #usuario Placeholder="USUARIO"></ion-input>
       </ion-item> 
   
       <ion-item class="Cr-1 se ">                  
@@ -15,7 +15,7 @@
       </ion-item>        
       
       <!--<ion-button class="ingresar " [routerLink]="['/home']">Ingresar</ion-button>-->
-      <ion-button class="ingresar" (click)="navegar()">Ingresar</ion-button>
+      <ion-button class="ingresar" (click)="navegar(usuario?.value)">Ingresar</ion-button>
   
     </div>
   </ion-app>
