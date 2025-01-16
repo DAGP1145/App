@@ -13,10 +13,21 @@ import { NavigationExtras } from '@angular/router'; /* se agrego */
 export class LoginPage implements OnInit {
                 /* se agrego */
   constructor(private router:Router) { }
-   /* se agrego el metodo navegar */
-  navegar(){
-    console.log("ingresamos al metodo");
 
+   /* se agrego el metodo navegar básico
+  navegar(){
+    console.log("ingresamos al metodo");*/
+
+   /* se modifico el metodo navegar */
+   navegar(correo: string | number | null | undefined) {
+    if (typeof correo !== 'string' || !correo) {
+      console.log("El correo ingresado no es válido.");
+      return;
+    }
+
+    console.log("Ingresamos al método con el correo:", correo);
+/* por el momento aun no se me ocurre que tipo de información traspasar, 
+asi que esto quedara para despues, pero es parte del entregable 1
 
     let pedrito: NavigationExtras = {
       state : {
@@ -25,7 +36,15 @@ export class LoginPage implements OnInit {
         edad: 37
       }
     }
-    this.router.navigate(["/perfil-alumno"], pedrito);
+    this.router.navigate(["/perfil-alumno"], pedrito);*/
+
+    if (correo.endsWith("@duocuc.cl")) {
+      this.router.navigate(["/perfil-alumno"]);
+    } else if (correo.endsWith("@profesor.duoc.cl")) {
+      this.router.navigate(["/perfil-docente"]);
+    } else {
+      console.log("Correo no válido para redirección");
+    }
   }
 
   ngOnInit() {
