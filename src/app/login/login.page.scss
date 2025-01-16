@@ -1,0 +1,133 @@
+
+  /*
+    [id, selector o clase ^= "algun valor especifico "]{
+    color: #000; edita la primera palabra de un texto
+  }
+    [id, selector o clase $= "algun valor especifico "]{
+    color: #000; edita la ultima palabra de un texto
+  }
+    [id, selector o clase *= "algun valor especifico"]{
+    color: #000; edita una palabra espefica de un texto
+  }
+
+    a, h1{
+    color: #000; se aplicara el color para ambos elementos
+  }
+
+  .contenedor h1{ esto es herencia, de descendencia no directa, porque supongamos que hay un elemento que contiene a h1 como un div o sea <contenedor><div><h1>hola</h1></div></contenedor> esto implica que la herencia se aplicara aunque el elemento no este directamente con el contenedor padre o sea algo asi <contenedor><h1>hola</h1></contenedor>
+    color: #000; se aplicara el color el elemetos h1 del contenedor
+    }
+
+  .contenedor>h1{ esto es herencia, de descendencia directa, como asi? en tal caso de que cumpla la condicion <contenedor><h1>hola</h1></contenedor> se aplicara el estilo si no, no no aplica <contenedor><div><h1>hola</h1></div></contenedor>
+    color: #000; se aplicara el color el elemetos h1 del contenedor
+    }
+
+    nav.contenedor.titulo{esto es herencia pero mas especifico el punto "." indica que nav contiene una clase contenedor y que esta, esta acompañada de un titulo
+    color: #000;
+    }
+
+    contenedor+titulo{Esto hace que aplica estilo al elemento adyacente a contenedor o sea en este caso titulo ya que lo definimos
+    color: #000;
+    }
+
+    nav~titulo{Esto hace que aplica estilo a todos los elemento adyacente a contenedor ya no es al que determinamos
+    color: #000;
+    }
+
+    margin: top right bottom left orden del margin 
+    
+    margin: top/bottom right/left tambien se pueden poner dos valores
+    margin: auto; no ayuda a centra el elemento horizontalmente ya que al ser auto hace los margenes horizontales tengan la misma distancia width del contenedor
+    es mas recomendable que al trabajar con flex solo se definan como auto los elementos right y left
+    
+    el border del padre puede interferir con el margin-top del hijo si no hay border por parte del padre puede que el margin del hijo tenga el margen del padre
+    o sea para que el margen del hijo funcione debe haber una capa que por parte del padre que controle e impida que compartan margenes
+
+    El padding-top y bottom afecta el height lo aumenta
+    El padding-right y left afecta el witdh lo aumenta también
+                                            El box-sizin por defecto es content-box que suma el contenido el padding y el borde
+    para que esto no suceda se puede usar el box-sizig: border-box hace que el padding o alguna otro elemento no altere el tamaño
+    ahora el problema  es que si el elemento es muy grande se puede desbordar y se puede ver feo, por lo tanto se puede utilizar la propiedad 
+    overflow:hidden; que hace que lo que se desborde se oculte.
+
+    border 20px dotted(muestra circulitos de 20px) dashed o solid color
+    border-width: top right bottom left lo mismo que margin y padding puedo definir donde quiero el border. tambien se puede aplicar para los estilos y colores.
+    border-top: 10px solid browm
+    border-top-width: 20px
+
+    No puedes modificar margin-top y margin-bottom, y el height ni el width de un elemento inline
+
+    El display: none es sacar del flujo al elemento
+    Opacity: 1 lo que hace desvanecer
+
+    La especificidad consiste en una organizacion de hasta 1000 elementos siendo este como el mas importante y el 1 con menos especifidad
+    La especifidad se suma mediante los selectores o sea nav.contenedor.titulo{} por lo tanto se aplicara el estilo de quien tenga mas especifidad
+
+    La cascada consiste en si existen dos selectores iguales o sea tipo:
+      .icon{
+    color: #000;
+  }
+      .icon{
+    color: #fff;
+  }  
+    se aplicara el ultimo, porque el ordenamiento va de arriba hacia abajo por lo tanto se aplicara el ultimo estilo
+    la cascada la rompe la especifidad. por lo tanto no importa la cascada cuando este presente la especifidad
+
+
+    Se puede obligar a un elemento heredar cierto atributos del padre mediante inherit puede ser el border, padding, width etc...
+
+    object-fit: cover; restaura la imagen si se deforma, en el caso de que src="imagen" style="width:200px; height: 100px; border-radius:50%; para que se a un circulo tiene que tener todos sus lados iguales, a veces
+     las imagenes tiene dimensiones que no forman un cuadro perfecto, por lo tanto hay que forzarlo como en el ejemplo y agregarle el object-fit: cover; que ajustara la imagen
+
+    box-shadow: h-offset(desplazamiento horiontal) v-offset(desplazamiento vertical) blur(difumina) spread(propagación) color, [h-offset, v-offset, blur, spread, color]podemos agregar otra sombra, hasta cuatro creo, siguiendo este orden
+
+    https://www.remove.bg/es#:~:text=Remove%20image%20backgrounds%20automatically%20in%205 con esto puedes remover el fondo
+    
+    con filter: drop-shadow(h-offset, v-offset, blur color) se aplica para png o elememtos que no tengan fondo
+  */
+
+  ion-app {
+    background-color: #6E6E6E;
+  }
+
+.duoc {
+    margin: 0 10% 25% 10%;
+    filter: drop-shadow(10px 10px 10px black);
+  }
+
+.Cr-1{
+
+    text-align: center;
+    --ion-item-background: #fff;
+    --color: #000;
+
+}
+
+.Cr-1, .ingresar {
+    margin: 0 auto; /* Centra horizontalmente */
+    width: 60%;
+    height: 15%;
+    border-radius: 5px;
+}
+
+.ingresar {
+    display: block;
+    --background: #fff; 
+    --color: black;
+}
+
+/*.centrar {
+    width: 100%; ;
+    margin: 40% 0 40% 0;
+  }*/
+
+  .centrar {
+    width: 100%;
+    margin: 35% 0 40% 0; /* Elimina márgenes del contenedor */
+    padding: 10px 0; /* Añade separación vertical con padding */
+    display: flex;
+    flex-direction: column; /* Asegura alineación vertical */
+    gap: 10px; /* Espaciado consistente entre elementos */
+}
+
+/*Entender el gap, flex-direction, display*/
