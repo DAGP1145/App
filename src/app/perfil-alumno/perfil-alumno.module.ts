@@ -15,6 +15,6 @@ import { PerfilAlumnoPage } from './perfil-alumno.page';
     IonicModule,
     PerfilAlumnoPageRoutingModule
   ],
-  declarations: [PerfilAlumnoPage]
+  declarations: []
 })
 export class PerfilAlumnoPageModule {}

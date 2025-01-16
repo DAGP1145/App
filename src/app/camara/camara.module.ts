@@ -15,6 +15,6 @@ import { CamaraPage } from './camara.page';
     IonicModule,
     CamaraPageRoutingModule
   ],
-  declarations: [CamaraPage]
+  declarations: []
 })
 export class CamaraPageModule {}
