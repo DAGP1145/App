@@ -15,6 +15,6 @@ import { PerfilDocentePage } from './perfil-docente.page';
     IonicModule,
     PerfilDocentePageRoutingModule
   ],
-  declarations: [PerfilDocentePage]
+  declarations: []
 })
 export class PerfilDocentePageModule {}
