@@ -1,5 +1,6 @@
-import { Component, } from '@angular/core'; 
+import { Component, OnInit, } from '@angular/core'; 
 import { IonicModule } from '@ionic/angular';  /* Se agrego */
+import { Router } from '@angular/router';  /* Se agrego */
 
 @Component({
   selector: 'app-home',
@@ -8,8 +9,19 @@ import { IonicModule } from '@ionic/angular';  /* Se agrego */
   imports: [IonicModule],  /* Se agrego */
   styleUrls: ['home.page.scss'],
 })
-export class HomePage {
 
-  constructor() {}
+export class HomePage implements OnInit {
 
+  curso: { codigo: string; nombre: string } | undefined;
+
+  constructor(private router: Router) {
+
+    const navigation = this.router.getCurrentNavigation();
+    this.curso = navigation?.extras.state?.['curso'];
+  }
+
+
+
+  ngOnInit(){
+  }
 }

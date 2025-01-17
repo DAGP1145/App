@@ -1,13 +1,37 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>perfilDocente</ion-title>
-  </ion-toolbar>
-</ion-header>
+<ion-app>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">perfilDocente</ion-title>
-    </ion-toolbar>
-  </ion-header>
-</ion-content>
+  <div class="centrar">
+    <ion-card class="tamaño al-text color">
+      <ion-card-title> Docente: Diego Gonzalez</ion-card-title>
+                       <!--*Se agrego la fecha con interpolación-->
+      <ion-card-subtitle class="color">{{ fechaHoy }}</ion-card-subtitle>
+    </ion-card>
+
+    <p style="color: white">Sus cursos</p>
+                    <!--*ngFor se agrego-->
+    <ion-card
+    *ngFor="let curso of cursos"
+    (click)="navegar2(curso)" 
+    class="tamaño al-text color">
+
+      <ion-card-title> {{ curso.codigo }}</ion-card-title>
+      <ion-card-subtitle> {{ curso.nombre }}</ion-card-subtitle>
+
+    </ion-card>
+
+
+<!--
+    <ion-card (click)="navegar2()" class="tamaño al-text color">
+      <ion-card-title> PVC xxxx-xxx-xxx</ion-card-title>
+      <ion-card-subtitle> Arquitectura</ion-card-subtitle>
+    </ion-card>
+
+    <ion-card  (click)="navegar2()" class="tamaño al-text color">
+      <ion-card-title > PVC xxxx-xxx-xxx</ion-card-title>
+      <ion-card-subtitle > Programacion de  base de datos</ion-card-subtitle>
+    </ion-card> 
+-->
+
+
+  </div>
+</ion-app>
