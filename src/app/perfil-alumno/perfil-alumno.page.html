@@ -12,8 +12,17 @@
   <div class="centrar">
     <ion-card class="tamaño al-text color">
       <ion-card-title> Diego Gonzalez</ion-card-title>
-      <ion-card-subtitle class="color"> Aqui va la fecha de hoy</ion-card-subtitle>
+      <ion-card-subtitle>{{ fechaHoy }}</ion-card-subtitle>
     </ion-card>
+
+    <ion-img
+    class="imagen"
+    src="assets\img\964ed57466c6c9c103135d0f1eddc38d.jpg"
+    alt="Debería de haber una imagen aquí">
+    </ion-img>
+
+    <ion-button [routerLink]="['/login']" >Regresar</ion-button>
+
   </div>
 
 </ion-app>

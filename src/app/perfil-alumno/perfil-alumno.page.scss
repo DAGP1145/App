@@ -1,15 +1,14 @@
 ion-app {
---background-color: #6E6E6E ;
 background-color: #6E6E6E;
 }
 
 .centrar {
-    margin: 35% 0 40% 0; /* Elimina márgenes del contenedor */
+    margin: 15% 0 40% 0; /* Elimina márgenes del contenedor */
     padding: 10px 0; /* Añade separación vertical con padding */
     display: flex;
     align-items: center;
     flex-direction: column; /* Asegura alineación vertical */
-    gap: 10px; /* Espaciado consistente entre elementos */
+    gap: 50px; /* Espaciado consistente entre elementos */
 }
 
 .tamaño {
@@ -23,10 +22,6 @@ background-color: #6E6E6E;
         --color: #000;
         font-size: 15px;
  }
-/*esto hara que el cursor al pasar por el card lo señale como si fuera algo clickeable*/
- ion-card{
-    cursor: pointer;
- }
 
  .al-text {
     display: flex;
@@ -34,3 +29,23 @@ background-color: #6E6E6E;
     justify-content: center;
     align-items: center;
  }
+
+ .imagen{
+   width: 200px;
+   border-radius: 15px;
+   overflow: hidden;
+ }
+
+
+ ion-button{ 
+
+   --background: white;
+   --color: #000;
+   font-size: 15px;
+   font-weight: bolder;
+   filter: drop-shadow(1px 0 2px black);
+   text-transform: none;
+
+ }
+
+

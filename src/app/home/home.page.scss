@@ -1,0 +1,44 @@
+.centrar {
+  margin: 10% 0 40% 0; /* Elimina márgenes del contenedor */
+  padding: 10px 0; /* Añade separación vertical con padding */
+  display: flex;
+  align-items: center;
+  flex-direction: column; /* Asegura alineación vertical */
+  gap: 50px; /* Espaciado consistente entre elementos */
+}
+
+  ion-app {
+  background-color: #6E6E6E;
+  }
+
+  .tamaño {
+    width: 60%;
+    height: 80px;
+ }
+
+ion-label{
+  --color: #000;
+  font-size: 15px;
+}
+
+ .al-text {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+ion-list {
+  width: 65%;
+  height: auto;
+  border-radius: 5px;
+  box-shadow: 0 2px 2px rgb(77, 75, 75);
+}
+
+ion-item {
+  --min-height: auto ;
+}
+
+.color { 
+  color: #000;
+}
