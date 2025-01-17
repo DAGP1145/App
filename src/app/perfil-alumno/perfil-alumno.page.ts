@@ -12,6 +12,7 @@ import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';/* Se
 export class PerfilAlumnoPage implements OnInit {
   /* Se agregaron los elementos como la variable NombreDocente y los elementos dentro del constructor */
   nombreDocente : any;
+
   constructor(private router:Router) { 
 
     this.nombreDocente = this.router.getCurrentNavigation()?.extras.state?.['nombre']
@@ -25,3 +26,4 @@ export class PerfilAlumnoPage implements OnInit {
   }
 
 }
+

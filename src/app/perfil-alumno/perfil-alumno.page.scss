@@ -1,0 +1,36 @@
+ion-app {
+--background-color: #6E6E6E ;
+background-color: #6E6E6E;
+}
+
+.centrar {
+    margin: 35% 0 40% 0; /* Elimina márgenes del contenedor */
+    padding: 10px 0; /* Añade separación vertical con padding */
+    display: flex;
+    align-items: center;
+    flex-direction: column; /* Asegura alineación vertical */
+    gap: 10px; /* Espaciado consistente entre elementos */
+}
+
+.tamaño {
+
+    width: 65%;
+    height: 80px;
+
+ }
+
+  ion-card>ion-card-subtitle, ion-card-title{
+        --color: #000;
+        font-size: 15px;
+ }
+/*esto hara que el cursor al pasar por el card lo señale como si fuera algo clickeable*/
+ ion-card{
+    cursor: pointer;
+ }
+
+ .al-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+ }
