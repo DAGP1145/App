@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular'; /* Se agrego */
 import { RouterModule } from '@angular/router'; // Asegúrate de importar esto
-import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';/* Se agrego */
+
 
 @Component({
   selector: 'app-perfil-alumno',
@@ -12,7 +12,7 @@ import { ActivatedRoute, Router, NavigationExtras } from '@angular/router';/* Se
 })
 export class PerfilAlumnoPage implements OnInit {
   /* Se agregaron los elementos como la variable NombreDocente y los elementos dentro del constructor */
-
+  alertButtons = ['Siguiente'];
   fechaHoy: string = new Date().toLocaleDateString();
 
   constructor() { 

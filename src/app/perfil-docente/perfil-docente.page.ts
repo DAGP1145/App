@@ -18,9 +18,9 @@ export class PerfilDocentePage implements OnInit {
   fechaHoy: string = new Date().toLocaleDateString();
 
   cursos = [
-    { codigo: 'PVC 1010-001-001', nombre: 'Estadística' },
-    { codigo: 'PVC 1020-002-002', nombre: 'Arquitectura' },
-    { codigo: 'PVC 1030-003-003', nombre: 'Programación de Base de Datos' },
+    { codigo: 'PVC 1010-001-001', nombre: 'Estadistica' },
+    { codigo: 'PVC 1020-002-002', nombre: 'Matemática' },
+    { codigo: 'PVC 1030-003-003', nombre: 'Ingles' },
   ];
 
   constructor(private router:Router) { }
