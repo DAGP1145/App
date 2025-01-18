@@ -9,7 +9,12 @@
 
 <ion-app>
 
+ <!--<ion-button class="btn-back">
+    <ion-icon color="light"name="return-up-back-outline"></ion-icon>
+  </ion-button>-->
+
   <div class="centrar">
+    
     <ion-card class="tamaño al-text color">
       <ion-card-title> Diego Gonzalez</ion-card-title>
       <ion-card-subtitle>{{ fechaHoy }}</ion-card-subtitle>
@@ -22,6 +27,15 @@
     </ion-img>
 
     <ion-button [routerLink]="['/login']" >Regresar</ion-button>
+
+    <ion-button id="present-alert">Mensaje de confirmación</ion-button>
+
+    <ion-alert
+      trigger="present-alert"
+      header="QR escaneado"
+      message="Estas presente en la asignatura :)"
+      [buttons]="alertButtons">
+    </ion-alert>
 
   </div>
 

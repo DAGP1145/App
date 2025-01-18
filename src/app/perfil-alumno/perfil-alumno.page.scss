@@ -3,12 +3,12 @@ background-color: #6E6E6E;
 }
 
 .centrar {
-    margin: 15% 0 40% 0; /* Elimina márgenes del contenedor */
+    margin: 10% 0 40% 0; /* Elimina márgenes del contenedor */
     padding: 10px 0; /* Añade separación vertical con padding */
     display: flex;
     align-items: center;
     flex-direction: column; /* Asegura alineación vertical */
-    gap: 50px; /* Espaciado consistente entre elementos */
+    gap: 30px; /* Espaciado consistente entre elementos */
 }
 
 .tamaño {
@@ -36,6 +36,14 @@ background-color: #6E6E6E;
    overflow: hidden;
  }
 
+ /*.btn-back{
+
+   margin: 50px 0 0 40px ;
+   width: 15%;
+   --background: #000;
+
+ }*/
+
 
  ion-button{ 
 
@@ -48,4 +56,4 @@ background-color: #6E6E6E;
 
  }
 
-
+/*-----------------------------------------*/
