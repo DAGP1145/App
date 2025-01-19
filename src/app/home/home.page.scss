@@ -1,19 +1,12 @@
 .centrar {
-  margin: 10% 0 40% 0; /* Elimina márgenes del contenedor */
-  padding: 10px 0; /* Añade separación vertical con padding */
+  margin: 20% 0% 0% 0; /* Elimina márgenes del contenedor */
+  padding: 20px; /* Añade separación vertical con padding */
   display: flex;
   align-items: center;
   flex-direction: column; /* Asegura alineación vertical */
-  gap: 30px; /* Espaciado consistente entre elementos */
+  gap:30px; /* Espaciado consistente entre elementos */
 }
 
-.btn-back{
-
-  margin: 50px 0 0 40px ;
-  width: 15%;
-  --background: #000;
-
-}
 
   ion-app {
   background-color: #6E6E6E;
@@ -37,11 +30,19 @@ ion-label{
 }
 
 ion-list {
-  width: 65%;
-  height: auto;
+  width: 60%;
+  height: 200px;
   border-radius: 5px;
   box-shadow: 0 2px 2px rgb(77, 75, 75);
+
+  overflow-y: scroll; /* Scroll solo en el eje Y */
+  scrollbar-width: none; /*Elimina la barra de scrollbar*/
 }
+
+ion-img{
+  height: 150px;
+}
+
 
 .color { 
   color: #000;
