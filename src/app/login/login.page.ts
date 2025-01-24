@@ -2,7 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { IonicModule } from '@ionic/angular'; /* se agrego */
 import { RouterModule } from '@angular/router'; /* se agrego */
 import { Router} from '@angular/router'; /* se agrego */
-import { NavigationExtras } from '@angular/router'; /* se agrego */
+import { ServicesService } from '../services.service';
+import { NavigationExtras } from '@angular/router'; /* se agrego pero no se utiliza */
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
@@ -12,7 +13,7 @@ import { NavigationExtras } from '@angular/router'; /* se agrego */
 })
 export class LoginPage implements OnInit {
                 /* se agrego */
-  constructor(private router:Router) { }
+  constructor(private router:Router, private authService: ServicesService) { }
 
    /* se agrego el metodo navegar básico
   navegar(){
@@ -39,8 +40,10 @@ asi que esto quedara para despues, pero es parte del entregable 1
     this.router.navigate(["/perfil-alumno"], pedrito);*/
 
     if (correo.endsWith("@duocuc.cl")) {
+      this.authService.login();
       this.router.navigate(["/perfil-alumno"]);
     } else if (correo.endsWith("@profesor.duoc.cl")) {
+      this.authService.login();
       this.router.navigate(["/perfil-docente"]);
     } else {
       console.log("Correo no válido para redirección");
