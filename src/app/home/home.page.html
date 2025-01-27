@@ -3,24 +3,21 @@
     
     <div class="centrar">
       <ion-card class="tamaño al-text color">
-        <ion-card-title>{{ curso?.codigo }}</ion-card-title>
+        <ion-card-title>{{ curso?.codigoSeccion }}</ion-card-title>
         <ion-card-subtitle>{{ curso?.nombre }}</ion-card-subtitle>
       </ion-card>
 
       <ion-img
-        src="assets/img/bing_generated_qrcode.png"
-        alt="Debería haber una imagen aquí">
-      </ion-img> 
+      *ngIf="qrCode" [src]="qrCode" alt="QR Code generado">
+      </ion-img>
 
       <ion-list>
-        @for (item of items; track item; let index = $index) {
-        <ion-item>
+        <ion-item *ngFor="let alumno of alumnos;">
           <ion-avatar slot="start">
-            <img [src]="'https://picsum.photos/80/80?random=' + index" alt="avatar" />
+          <img [src]="'https://picsum.photos/80/80?random=' + alumno.id" alt="avatar" />
           </ion-avatar>
-          <ion-label>{{ item }}</ion-label>
+          <ion-label>{{ alumno.nombre }}</ion-label>
         </ion-item>
-        }
       </ion-list>
     </div>
 

@@ -1,29 +1,26 @@
 <ion-app>
-
-
   <div class="centrar">
-
     <h1 class="titulo">BIENVENIDO</h1>
 
     <ion-card class="tamaño al-text">
-      <ion-card-title> Docente: Diego Gonzalez</ion-card-title>
-                       <!--*Se agrego la fecha con interpolación-->
+      <ion-card-title> Docente: {{ nombreProfesor || 'Nombre no disponible' }}</ion-card-title>
       <ion-card-subtitle>{{ fechaHoy }}</ion-card-subtitle>
     </ion-card>
 
-    <p style="color: white; font-size: 20px; filter: drop-shadow(1px 0 3px black);">Sus cursos</p>
-                    <!--*ngFor se agrego-->
+    <p style="color: white; font-size: 20px; filter: drop-shadow(1px 0 3px black);">
+      Sus cursos
+    </p>
+
     <ion-card
-    *ngFor="let curso of cursos"
-    (click)="navegar2(curso)" 
-    class="tamaño al-text">
-
-      <ion-card-title> {{ curso.codigo }}</ion-card-title>
-      <ion-card-subtitle> {{ curso.nombre }}</ion-card-subtitle>
-
+      *ngFor="let curso of cursos"
+      (click)="navegar2(curso)"
+      class="tamaño al-text"
+    >
+      <ion-card-title>{{ curso.codigoSeccion }}</ion-card-title>
+      <ion-card-subtitle>{{ curso.nombre }}</ion-card-subtitle>
     </ion-card>
-
-
+  </div>
+</ion-app>
 <!--
     <ion-card (click)="navegar2()" class="tamaño al-text color">
       <ion-card-title> PVC xxxx-xxx-xxx</ion-card-title>
@@ -36,6 +33,3 @@
     </ion-card> 
 -->
 
-
-  </div>
-</ion-app>
