@@ -1,13 +1,17 @@
-<ion-header [translucent]="true">
-  <ion-toolbar>
-    <ion-title>page404</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">page404</ion-title>
-    </ion-toolbar>
-  </ion-header>
+<ion-content fullscreen>
+  <div class="container">
+    <ion-card class="error-card">
+      <ion-card-header>
+        <ion-card-title>ERROR404 <br> Página no encontrada</ion-card-title>
+      </ion-card-header>
+      <ion-card-content>
+        <img src="assets/img/what 🤷🏿_♂️.jpg" alt="Página no encontrada" class="error-img" />
+        <ion-button expand="full" [routerLink]="['/login']">
+          ¡¡¡¡¡Regresa al login!!!!!!<br>¡¡¡¡¡CORRE!!!!!!!
+        </ion-button>
+      </ion-card-content>
+    </ion-card>
+  </div>
 </ion-content>
+
+
