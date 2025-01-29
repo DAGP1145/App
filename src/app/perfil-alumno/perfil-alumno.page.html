@@ -1,32 +1,33 @@
-
-<!--
-<ion-header [translucent]="false">
-  <ion-toolbar>
-
-    {{nombreDocente}}
-  </ion-toolbar>
-</ion-header>-->
-
 <ion-app>
-
- <!--<ion-button class="btn-back">
-    <ion-icon color="light"name="return-up-back-outline"></ion-icon>
-  </ion-button>-->
-
   <div class="centrar">
-    
     <ion-card class="tamaño al-text color">
       <ion-card-title> Diego Gonzalez</ion-card-title>
       <ion-card-subtitle>{{ fechaHoy }}</ion-card-subtitle>
     </ion-card>
 
+    <!-- Aquí se coloca la imagen tomada con la cámara -->
     <ion-img
-    class="imagen"
-    src="assets\img\964ed57466c6c9c103135d0f1eddc38d.jpg"
-    alt="Debería de haber una imagen aquí">
+      *ngIf="base64Image; else defaultImage"
+      class="imagen"
+      [src]="base64Image">
     </ion-img>
 
-    <ion-button [routerLink]="['/login']" >Regresar</ion-button>
+    <!-- Imagen por defecto si no se ha tomado una foto -->
+    <ng-template #defaultImage>
+      <ion-img
+        class="imagen"
+        src="assets/img/964ed57466c6c9c103135d0f1eddc38d.jpg"
+        alt="Imagen predeterminada">
+      </ion-img>
+    </ng-template>
+
+    <!-- Botones -->
+    <ion-button expand="full" type="submit" (click)="camara()">Cámara</ion-button>
+    <ion-button expand="full" type="submit">Limpiar</ion-button>
+    <ion-button expand="full" type="submit"(click)="mostrar()">Mostrar</ion-button>
+    <ion-button expand="full" type="submit"(click)="actualizar()">Actualizar</ion-button>
+
+    <ion-button [routerLink]="['/login']">Regresar</ion-button>
 
     <ion-button id="present-alert">Mensaje de confirmación</ion-button>
 
@@ -36,7 +37,6 @@
       message="Estas presente en la asignatura :)"
       [buttons]="alertButtons">
     </ion-alert>
-
   </div>
-
 </ion-app>
+
